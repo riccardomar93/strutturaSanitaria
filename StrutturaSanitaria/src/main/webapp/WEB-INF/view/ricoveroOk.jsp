@@ -55,7 +55,7 @@ background:yellow;
 </style>
 </head>
 <body>
-
+<a href="homePage">HomePage</a>
 <div class ="wrap">
 
 	<form action="inserimentoRicovero" method="get">

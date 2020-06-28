@@ -55,7 +55,7 @@ background:yellow;
 </style>
 </head>
 <body>
-
+<p><a href="homePage">HomePage</a></p>
 <div class ="wrap">
 
 	<form action="inserimentoAnalisi" method="get">

@@ -38,6 +38,7 @@
 	
 </head>
 <body>
+<a href="homePage">HomePage</a>
 <div class="contact-form">
 
 <form action="maprico" method="get">

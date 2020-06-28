@@ -49,11 +49,11 @@ body{
 
 <div class="contact-form">
 
-<h3 align="center"><a href="ricercaDipendenti">VISUALIZZA TUTTI I DIPENDENTI</a></h3>
+<h3 align="center"><a href="ricercaDipAll">VISUALIZZA TUTTI I DIPENDENTI</a></h3>
 <h3 align="center"><a href="newDipendente">INSERISCI UN NUOVO DIPENDENTE</a></h3>
 <h3 align="center"><a href="deleteDipendente">ELIMINA UN DIPENDENTE</a></h3>
 <h3 align="center"><a href="updateDipendente">MODIFICA UN DIPENDENTE</a></h3>
-
+<h3 align="center"><a href="logOut">Log Out</a></h3>
 
 </div>
 </body>

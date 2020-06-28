@@ -25,6 +25,7 @@ public class MainController {
     private static int id_repartoStatico;
     private static String repartoStatico;
     private static String dataStatica;
+    private static boolean controlloLogin = false;
 
     @Autowired
     AnalisiService as;
@@ -61,7 +62,19 @@ public class MainController {
 
     @GetMapping(value = "/login")
     public String linkLogin() {
-	return "login";
+    	String login;
+    	if(controlloLogin==false) {
+    		login  = "login";
+	return login;}
+    	else {
+    		login = "gestioneDipendenti";
+    		return login;
+    	}
+    }
+    @GetMapping(value = "/logOut")
+    public String logOut() {
+    controlloLogin = false;
+	return "index";
     }
 
     @GetMapping(value = "/redirectAnalisi")
@@ -160,11 +173,11 @@ public class MainController {
     @GetMapping("/controlloCredenziali")
     public String controlla(Model m, @RequestParam(name = "username") String username,
 	    @RequestParam(name = "password") String password) {
-
+    
 	Login l = ls.findByUsernameAndPassword(username, password);
 
 	if (l != null) {
-
+		controlloLogin = true;
 	    return "gestioneDipendenti";
 
 	} else
@@ -178,7 +191,7 @@ public class MainController {
 	ArrayList<Dipendente> d = (ArrayList) ds.findAll();
 
 	m.addAttribute("lista", d);
-	return "listaDipendenti";
+	return "allDipendenti";
 
     }
 

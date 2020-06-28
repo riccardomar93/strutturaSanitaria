@@ -6,6 +6,17 @@
 <meta charset="ISO-8859-1">
 <title>CREDENZIALI ERRATE</title>
 <meta http-equiv="refresh" content="5;URL=redirectLogin">
+<style>
+
+body{
+	
+	background-image :url(CSS/error-t.jpg);
+	height:100px;
+	weight:100px;
+	
+	}
+
+</style>
 </head>
 <body>
 <div align="center">
