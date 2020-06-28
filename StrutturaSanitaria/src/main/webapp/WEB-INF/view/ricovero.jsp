@@ -50,7 +50,7 @@
 		<label >Reparto</label><br>
 		<select name="Reparto">
 		<option value = "Ortopedia" >Ortopedia</option>
-		<option value = "Ginecoglogia">Ginecologia</option>
+		<option value = "Ginecologia">Ginecologia</option>
 		</select>
 		<input type="submit" value ="INVIO">
 
