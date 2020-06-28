@@ -105,7 +105,7 @@ public class MainController {
 		Analisi a=new Analisi(idRicetta,nome_paziente,cognome_paziente,dataStatica);
 		System.out.println(a.getIdRicetta());
 		as.saveAndFlush(a);
-		//as.decrementoPosti(dataStatica);
+		as.decrementoPosti(dataStatica);
 		System.out.println("non c'e'");
 			
 		m.addAttribute("cod_ricetta",a.getIdRicetta());
