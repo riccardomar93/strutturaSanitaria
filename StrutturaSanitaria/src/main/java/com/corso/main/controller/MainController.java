@@ -3,9 +3,11 @@ package com.corso.main.controller;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.corso.main.model.Analisi;
@@ -21,7 +23,7 @@ import com.corso.main.service.ResponsabileService;
 import com.corso.main.service.RicoveroService;
 
 @Controller
-public class MainController {
+public class MainController implements ErrorController {
     private static int id_repartoStatico;
     private static String repartoStatico;
     private static String dataStatica;
@@ -196,35 +198,53 @@ public class MainController {
     }
 
     @GetMapping("/nuovoDipendente")
-    public void nuovoDip(Model m, @RequestParam(name = "nome") String nome,
+    public String nuovoDip(Model m, @RequestParam(name = "nome") String nome,
 	    @RequestParam(name = "cognome") String cognome, @RequestParam(name = "stipendio") Double stipendio) {
 
 	Dipendente d = new Dipendente(nome, cognome, stipendio);
 
 	ds.saveAndFlush(d);
+	
+	return "confermaAggiunta";
     }
 
     @GetMapping("/eliminaDipendente")
-    public void eliminaDip(Model m, @RequestParam(name = "idDipendente") Integer idDipendente) {
-
-	ds.deleteById(idDipendente);
+    public String eliminaDip(Model m, @RequestParam(name = "idDipendente") Integer idDipendente)
+    		 {
+    	Dipendente d ;
+    	String eliminazione;
+    	d = ds.findByIdDipendente(idDipendente);
+		if(d != null) {
+			ds.deleteById(d.getIdDipendente());
+			eliminazione = "confermaEliminazione";
+			return eliminazione;
+		}
+		else {
+			eliminazione = "dipendenteNo";
+			return eliminazione;
+		}
 
     }
 
     @GetMapping("/modificaDipendente")
-    public void modificaDip(Model m, @RequestParam(name = "idDipendente") Integer idDipendente,
+    public String modificaDip(Model m, @RequestParam(name = "idDipendente") Integer idDipendente,
 	    @RequestParam(name = "nome") String nome, @RequestParam(name = "cognome") String cognome,
 	    @RequestParam(name = "stipendio") Double stipendio) {
 
 	Dipendente d = ds.findByIdDipendente(idDipendente);
-
+	String conferma;
 	if (d != null) {
-
-	    Dipendente d2 = new Dipendente(idDipendente, nome, cognome, stipendio);
-	    ds.saveAndFlush(d2);
-
+		d.setIdDipendente(idDipendente);
+	    d.setNome(nome);
+	    d.setCognome(cognome);
+	    d.setStipendio(stipendio);
+	    ds.save(d);
+	    conferma = "confermaModifica";
+	    return conferma;
 	} else
-	    System.out.println("Il dipendente non esiste.");
+		conferma="dipendenteNo";
+		return conferma;
+	   
 
     }
 
@@ -269,6 +289,7 @@ public class MainController {
 	    // posso specificare + parametri dello stesso oggetto/tipo mutuamente esclusivi
 	    @RequestParam(name = "Reparto", required = false) String reparto) {
 	repartoStatico = reparto;
+	System.out.println(dataRicerca);
 	dataStatica = dataRicerca;
 	System.out.println("dataStatica = " + dataStatica);
 
@@ -302,6 +323,17 @@ public class MainController {
 	}
 
 	return test;
+    }
+
+    @RequestMapping("/error")
+    public String handleError() {
+        //do something like logging
+        return "error";
+    }
+ 
+    @Override
+    public String getErrorPath() {
+        return "/error";
     }
 
 }

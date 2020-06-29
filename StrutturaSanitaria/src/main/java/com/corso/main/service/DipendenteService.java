@@ -11,5 +11,7 @@ public interface DipendenteService extends JpaRepository<Dipendente, Integer> {
 	public ArrayList<Dipendente> findAll();
 	
 	public Dipendente findByIdDipendente(Integer idDipendente);
+	
+	public Dipendente findByNomeAndCognome(String nomeDipendente,String cognomeDipendente);
 }
 

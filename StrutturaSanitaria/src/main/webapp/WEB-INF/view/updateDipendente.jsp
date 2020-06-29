@@ -4,9 +4,78 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>CONFERMA </title>
+<style>
+
+body{
+background : url(CSS/analisi.jpg);
+}
+.wrap{
+
+width :300px;
+margin:auto;
+background:#00adee;
+margin-top:50px;
+padding:5px;
+
+}
+form{
+padding:10px;
+font-family:arial;
+border:1px dotted white;
+
+}
+h2{
+text-align:center;
+background:transparence;
+color:white;
+padding:10px;
+border-radius:10px;
+}
+input{
+padding:10px;
+margin:20px;
+border-radius:5px;
+border:none;
+}
+input [type="text"]{
+width=90%;
+}
+input [type="submit"]{
+width=95%;
+background:orange;
+cursor:pointer;
+font-size:18px;
+font-weight:bold;
+color:white;
+}
+input [type="submit"]:hover{
+background:yellow;
+}
+</style>
 </head>
 <body>
+<p><a href="homePage">HomePage</a></p>
+<div class ="wrap">
 
+	<form action="nuovoDipendente" method="get">
+	<div align="center">
+		<h2>INSERISCI DATI DIPENDENTE DA MODIFICARE</h2>
+		<label>Id Dipendente</label>
+		<input type="text" name="idDipendente" placeholder="Id Dipendente"><br>
+		<label>Nome Dipendente</label>
+		<input type="text" name="nome" placeholder="Nome">
+		<label>Cognome Dipendente</label>
+		<input type="text" name="cognome" placeholder="Cognome">
+		<label>Stipendio Dipendente</label>
+		<input type="text" name="stipendio" placeholder="Stipendio">
+		<button type="reset" name="cancella">Cancella</button>
+		<input type="submit" name="INVIO">
+	</div>
+
+</form>
+
+</div>
+	
 </body>
 </html>

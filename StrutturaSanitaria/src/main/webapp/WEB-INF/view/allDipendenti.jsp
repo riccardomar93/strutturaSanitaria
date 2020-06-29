@@ -35,11 +35,13 @@
 <body>
 
 <table id="customers">
-	<tr><th>NOME</th><th>COGNOME</th></tr>
+	<tr><th>ID DIPENDENTE</th><th>NOME</th><th>COGNOME</th><th>STIPENDIO</th></tr>
 	<c:forEach items ="${requestScope.lista}" var="x">
 		<tr>
+			<td><c:out value = "${x.idDipendente}"></c:out></td>
 			<td><c:out value = "${x.nome}"></c:out></td>
 			<td><c:out value = "${x.cognome}"> </c:out></td>
+			<td><c:out value = "${x.stipendio}"> </c:out></td>
 		</tr>
 
 	</c:forEach>
