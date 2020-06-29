@@ -277,7 +277,10 @@ public class MainController implements ErrorController {
     @GetMapping("/maplabo")
 
     public String postiLab(Model emme, @RequestParam(name = "data") String dataRicerca) {
-
+    	
+    	if(dataRicerca.equals("")) {
+    		return "dataNonSelezionata";
+    	}
 	// qui devo passare dataRicerca
 	dataStatica = dataRicerca;
 
@@ -316,6 +319,9 @@ public class MainController implements ErrorController {
 	    @RequestParam(name = "Reparto", required = false) String reparto) {
 	repartoStatico = reparto;
 	System.out.println(dataRicerca);
+	if(dataRicerca.equals("")) {
+		return "dataNonSelezionata";
+	}
 	dataStatica = dataRicerca;
 	System.out.println("dataStatica = " + dataStatica);
 

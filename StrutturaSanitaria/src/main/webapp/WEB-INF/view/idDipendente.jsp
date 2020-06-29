@@ -61,7 +61,8 @@ li a:hover:not(.active) {
 </head>
 <body>
 <ul>
-  <li><a href="homePage">Home</a></li> 
+  <li><a href="login">Gestione Dipendenti</a></li>
+  <li><a href="homePage">Home Page</a></li>
 </ul>
 <table id="customers">
 	<tr><th>ID DIPENDENTE</th><th>NOME</th><th>COGNOME</th><th>STIPENDIO</th></tr>

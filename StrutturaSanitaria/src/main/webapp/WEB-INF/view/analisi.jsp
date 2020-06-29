@@ -67,7 +67,6 @@ li a:hover:not(.active) {
 
 </head>
 <body>
-
 <ul>
   <li><a href="homePage">Home</a></li> 
 </ul>

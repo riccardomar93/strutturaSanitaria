@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>CONFERMA </title>
+<title>DIPENDENTE </title>
 <style>
 ul {
     list-style-type: none;
@@ -82,7 +82,8 @@ background:yellow;
 </head>
 <body>
 <ul>
-  <li><a href="homePage">Home</a></li> 
+  <li><a href="login">Gestione Dipendenti</a></li>
+  <li><a href="homePage">Home Page</a></li>  
 </ul>
 <div class ="wrap">
 

@@ -7,6 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>CONFERMA RICOVERO </title>
+<meta http-equiv="refresh" content="5;URL=login">
 <style>
 
 	body{
@@ -46,9 +47,7 @@
 	</style>
 </head>
 <body>
-<ul>
-  <li><a href="homePage">Home</a></li> 
-</ul>		
+		
 	<div class="contact-form">
 			
 <h1 align="center">DIPENDENTE ELIMINATO CORRETTAMENTE</h1>

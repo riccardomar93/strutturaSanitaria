@@ -7,13 +7,21 @@
 <title>CERCA DISPONIBILITA</title>
 <meta http-equiv="refresh" content="5;URL=redirectAnalisi">
 <style>
-
+body{
+	
+	background :url(CSS/sorry.jpg);
+	background-position:center center;
+	-webkit-background-size:cover;
+	background-size:cover;
+	height:100vh;
+	
+	}
 .contact-form{
 	
 	max-width:600px;
 	margin:auto;
 	border-radius:5px;
-	background:#c8d6ff;
+	background:transparence;
 	padding:20px;
 	margin-top: 50px;
 	

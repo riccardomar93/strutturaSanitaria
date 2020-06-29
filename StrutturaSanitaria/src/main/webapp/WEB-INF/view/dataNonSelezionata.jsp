@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>NESSUN DIPENDENTE</title>
-<meta http-equiv="refresh" content="5;URL=login">
+<title>DATA NON SELEZIONATA</title>
+<meta http-equiv="refresh" content="5;URL=homePage">
 <style>
 body{
 	
@@ -21,7 +21,7 @@ body{
 	max-width:600px;
 	margin:auto;
 	border-radius:5px;
-	background:#transparence;
+	background:transparence;
 	padding:20px;
 	margin-top: 50px;
 	
@@ -42,9 +42,9 @@ body{
 <body>
 <div align="center" class="contact-form">
 
- 				<h1 align ="center">NESSUN DIPENDENTE ESISTENTE </h1>
- 				<h5 align ="center">SARAI REINDIRIZZATO ALLA GESTIONE DEI DIPENDENTI</h5><br><br>
- 				Non vuoi aspettare? <a href="login">CLICCA QUI</a>
+ 				<h1 align ="center">NESSUNA DATA SELEZIONATA</h1>
+ 				<h5 align ="center">SARAI REINDIRIZZATO ALLA RICERCA HOME PAGE</h5><br><br>
+ 				Non vuoi aspettare? <a href="homePage">CLICCA QUI</a>
 </div>
 
 </body>

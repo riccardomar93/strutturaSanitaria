@@ -7,7 +7,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>CONFERMA </title>
+<meta http-equiv="refresh" content="3;URL=login">
 <style>
+
 	body{
 	
 	background :url(CSS/OK.jpg);
@@ -45,9 +47,7 @@
 	</style>
 </head>
 <body>
-<ul>
-  <li><a href="homePage">Home</a></li> 
-</ul>		
+		
 	<div class="contact-form">
 			
 <h1 align="center">DIPENDENTE AGGIUNTO CORRETTAMENTE</h1>
