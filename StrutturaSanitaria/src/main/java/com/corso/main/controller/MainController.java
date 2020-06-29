@@ -51,7 +51,10 @@ public class MainController implements ErrorController {
     public String getIndex() {
 	return "index";
     }
-
+    @GetMapping(value = "/chiSiamo")
+    public String chiSiamo() {
+	return "chiSiamo";
+    }
     @GetMapping(value = "/analisi")
     public String linkAnalisi() {
 	return "analisi";
@@ -96,26 +99,41 @@ public class MainController implements ErrorController {
 
     @GetMapping(value = "/ricercaDipendenti")
     public String ricercaDipendenti() {
+    	if(controlloLogin == true)
 	return "allDipendenti";
+    	else
+    return "login";
     }
 
     @GetMapping(value = "/newDipendente")
     public String newDipendente() {
+    	if(controlloLogin == true)
 	return "newDipendente";
+    	else
+    	 return "login";
     }
     @GetMapping(value = "/dipendenteById")
     public String dipendenteById() {
+    	if(controlloLogin == true)
 	return "dipendenteById";
+    	else
+	 return "login";
     }
 
     @GetMapping(value = "/deleteDipendente")
     public String deleteDipendente() {
+    	if(controlloLogin == true)
 	return "deleteDipendente";
+    	else
+    	return "login";
     }
 
     @GetMapping(value = "/updateDipendente")
     public String updateDipendente() {
+    	if(controlloLogin == true)
 	return "updateDipendente";
+    	else
+    		return "login";
     }
 
     @GetMapping("/inserimentoAnalisi")
@@ -193,11 +211,14 @@ public class MainController implements ErrorController {
 
     @GetMapping("/ricercaDipAll")
     public String cercaAll(Model m) {
-
+    	if(controlloLogin == true) {
 	ArrayList<Dipendente> d = (ArrayList) ds.findAll();
 
 	m.addAttribute("lista", d);
 	return "allDipendenti";
+    	}
+    	else
+    		return "login";
 
     }
     @GetMapping("/ricercaDipById")
@@ -224,17 +245,19 @@ public class MainController implements ErrorController {
     @GetMapping("/nuovoDipendente")
     public String nuovoDip(Model m, @RequestParam(name = "nome") String nome,
 	    @RequestParam(name = "cognome") String cognome, @RequestParam(name = "stipendio") Double stipendio) {
-
+    	if(controlloLogin == true) {
 	Dipendente d = new Dipendente(nome, cognome, stipendio);
 
 	ds.saveAndFlush(d);
 	
-	return "confermaAggiunta";
+	return "confermaAggiunta";}
+    	else return"login";
     }
 
     @GetMapping("/eliminaDipendente")
     public String eliminaDip(Model m, @RequestParam(name = "idDipendente") Integer idDipendente)
     		 {
+    	if(controlloLogin == true) {
     	Dipendente d ;
     	String eliminazione;
     	d = ds.findByIdDipendente(idDipendente);
@@ -247,6 +270,9 @@ public class MainController implements ErrorController {
 			eliminazione = "dipendenteNo";
 			return eliminazione;
 		}
+    		 }
+    	else 
+    		return "login";
 
     }
 
@@ -254,7 +280,7 @@ public class MainController implements ErrorController {
     public String modificaDip(Model m, @RequestParam(name = "idDipendente") Integer idDipendente,
 	    @RequestParam(name = "nome") String nome, @RequestParam(name = "cognome") String cognome,
 	    @RequestParam(name = "stipendio") Double stipendio) {
-
+    	if(controlloLogin == true) {
 	Dipendente d = ds.findByIdDipendente(idDipendente);
 	String controllo;
 	if (d != null) {
@@ -269,9 +295,13 @@ public class MainController implements ErrorController {
 	    ds.saveAndFlush(d);
 	    controllo = "confermaModifica";
 	    return controllo;
-	} else
+	} else {
 		controllo = "dipendenteNo";
     return controllo;
+    }
+    	}
+    	else 
+    		return "login";
     }
 
     @GetMapping("/maplabo")

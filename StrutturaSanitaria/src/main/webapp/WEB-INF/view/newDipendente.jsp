@@ -34,7 +34,7 @@ li a:hover:not(.active) {
     background-color: #4CAF50;
 }
 body{
-background : url(CSS/analisi.jpg);
+background : url(CSS/gestioneDip.jpg);
 }
 .wrap{
 

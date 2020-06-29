@@ -16,7 +16,7 @@
 			<ul class="menu">
 				<li><a href="analisi">ANALISI</a></li>
 				<li><a href="ricovero">RICOVERO</a></li>
-				<li><a href="#">CHI SIAMO</a></li>
+				<li><a href="chiSiamo">CHI SIAMO</a></li>
 				<li><a href="login">LOGIN</a></li>
 			</ul>	
 		</header>
