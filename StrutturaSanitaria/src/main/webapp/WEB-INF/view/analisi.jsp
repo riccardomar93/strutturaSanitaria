@@ -7,6 +7,33 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css" rel="stylesheet" id="bootstrap-css">
 	
 <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
 	body{
 	
 	background :url(CSS/analisi.jpg);
@@ -41,7 +68,9 @@
 </head>
 <body>
 
-<p><a href="homePage">HomePage</a></p>
+<ul>
+  <li><a href="homePage">Home</a></li> 
+</ul>
 		<div class="contact-form" >
 			<form action="maplabo" method="get">
 			<h2>CERCA DISPONIBILITA' PER DATA</h2>

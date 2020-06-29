@@ -8,6 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>CONFERMA RICOVERO </title>
 <style>
+
 	body{
 	
 	background :url(CSS/OK.jpg);
@@ -45,7 +46,9 @@
 	</style>
 </head>
 <body>
-		
+<ul>
+  <li><a href="homePage">Home</a></li> 
+</ul>		
 	<div class="contact-form">
 			
 <h1 align="center">DIPENDENTE ELIMINATO CORRETTAMENTE</h1>

@@ -6,7 +6,33 @@
 <meta charset="ISO-8859-1">
 <title>CONFERMA </title>
 <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
 body{
 background : url(CSS/analisi.jpg);
 }
@@ -55,7 +81,9 @@ background:yellow;
 </style>
 </head>
 <body>
-<p><a href="homePage">HomePage</a></p>
+<ul>
+  <li><a href="homePage">Home</a></li> 
+</ul>
 <div class ="wrap">
 
 	<form action="nuovoDipendente" method="get">
@@ -68,7 +96,7 @@ background:yellow;
 		<label>Stipendio Dipendente</label>
 		<input type="text" name="stipendio" placeholder="Stipendio">
 		<button type="reset" name="cancella">Cancella</button>
-		<input type="submit" name="INVIO">
+		<input type="submit" value="INVIO">
 	</div>
 
 </form>

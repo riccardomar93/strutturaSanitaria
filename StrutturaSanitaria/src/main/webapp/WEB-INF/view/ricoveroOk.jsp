@@ -6,7 +6,33 @@
 <meta charset="ISO-8859-1">
 <title>CONFERMA </title>
 <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
 body{
 background : url(CSS/ricovero.jpg);
 }
@@ -55,7 +81,9 @@ background:yellow;
 </style>
 </head>
 <body>
-<a href="homePage">HomePage</a>
+<ul>
+  <li><a href="homePage">Home</a></li> 
+</ul>
 <div class ="wrap">
 
 	<form action="inserimentoRicovero" method="get">
@@ -63,7 +91,8 @@ background:yellow;
 		<h2>INSERISCI I TUOI DATI</h2>
 		<input type="text" name="nome_paziente" placeholder="Nome">
 		<input type="text" name="cognome_paziente" placeholder="Cognome">
-		<input type="submit" name="INVIO">
+		<button type="reset" name="cancella">Cancella</button>
+		<input type="submit" value="INVIO">
 	</div>
 
 

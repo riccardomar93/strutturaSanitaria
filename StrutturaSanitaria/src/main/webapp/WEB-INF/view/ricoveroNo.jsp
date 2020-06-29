@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>CERCA DISPONIBILITA</title>
-<meta http-equiv="refresh" content="15;URL=redirectAnalisi">
+<meta http-equiv="refresh" content="5;URL=redirectRicovero">
 </head>
 <body>
 <div align="center">

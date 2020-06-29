@@ -40,6 +40,7 @@ body{
 	margin-left:10px;
 	
 	}
+	
 	h1{color:#ce2828}
 </style>
 </head>
@@ -50,6 +51,7 @@ body{
 <div class="contact-form">
 
 <h3 align="center"><a href="ricercaDipAll">VISUALIZZA TUTTI I DIPENDENTI</a></h3>
+<h3 align="center"><a href="dipendenteById">VISUALIZZA DIPENDENTE PER ID</a></h3>
 <h3 align="center"><a href="newDipendente">INSERISCI UN NUOVO DIPENDENTE</a></h3>
 <h3 align="center"><a href="deleteDipendente">ELIMINA UN DIPENDENTE</a></h3>
 <h3 align="center"><a href="updateDipendente">MODIFICA UN DIPENDENTE</a></h3>

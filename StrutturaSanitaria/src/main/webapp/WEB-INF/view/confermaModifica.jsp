@@ -45,13 +45,15 @@
 	</style>
 </head>
 <body>
-		
+<ul>
+  <li><a href="homePage">Home</a></li> 
+</ul>		
 	<div class="contact-form">
 			
 <h1 align="center">DIPENDENTE MODIFICATO CORRETTAMENTE</h1>
 
 	<br><br><br>
-	<a href="homePage">HomePage</a>
+	<a href="login">Torna alla Gestione</a>
 
 	</div>
 

@@ -84,7 +84,7 @@ public class MainController implements ErrorController {
 	return "analisi";
     }
 
-    @GetMapping(value = "/redirectRicover")
+    @GetMapping(value = "/redirectRicovero")
     public String redirectRicovero() {
 	return "ricovero";
     }
@@ -102,6 +102,10 @@ public class MainController implements ErrorController {
     @GetMapping(value = "/newDipendente")
     public String newDipendente() {
 	return "newDipendente";
+    }
+    @GetMapping(value = "/dipendenteById")
+    public String dipendenteById() {
+	return "dipendenteById";
     }
 
     @GetMapping(value = "/deleteDipendente")
@@ -196,6 +200,26 @@ public class MainController implements ErrorController {
 	return "allDipendenti";
 
     }
+    @GetMapping("/ricercaDipById")
+    public String cercaById(Model m,@RequestParam(name ="idDipendente") Integer idDipendente) {
+
+	Dipendente d = ds.findByIdDipendente(idDipendente);
+	String controllo;
+	if(d!=null) {
+		m.addAttribute("id", d.getIdDipendente());
+		m.addAttribute("nome", d.getNome());
+		m.addAttribute("cognome", d.getCognome());
+		m.addAttribute("stipendio", d.getStipendio());
+		controllo="idDipendente";
+		return controllo;
+	}
+	else {
+		controllo="dipendenteNo";
+		return controllo;
+	}
+	
+
+    }
 
     @GetMapping("/nuovoDipendente")
     public String nuovoDip(Model m, @RequestParam(name = "nome") String nome,
@@ -232,20 +256,22 @@ public class MainController implements ErrorController {
 	    @RequestParam(name = "stipendio") Double stipendio) {
 
 	Dipendente d = ds.findByIdDipendente(idDipendente);
-	String conferma;
+	String controllo;
 	if (d != null) {
-		d.setIdDipendente(idDipendente);
-	    d.setNome(nome);
-	    d.setCognome(cognome);
-	    d.setStipendio(stipendio);
-	    ds.save(d);
-	    conferma = "confermaModifica";
-	    return conferma;
+		
+		if(!nome.equals(""))
+			d.setNome(nome);
+		if(!cognome.equals(""))
+			d.setCognome(cognome);
+		if(stipendio!=null)
+			d.setStipendio(stipendio);
+		
+	    ds.saveAndFlush(d);
+	    controllo = "confermaModifica";
+	    return controllo;
 	} else
-		conferma="dipendenteNo";
-		return conferma;
-	   
-
+		controllo = "dipendenteNo";
+    return controllo;
     }
 
     @GetMapping("/maplabo")

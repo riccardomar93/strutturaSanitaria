@@ -55,7 +55,9 @@ background:yellow;
 </style>
 </head>
 <body>
-<p><a href="homePage">HomePage</a></p>
+<ul>
+  <li><a href="homePage">Home</a></li> 
+</ul>
 <div class ="wrap">
 
 	<form action="eliminaDipendente" method="get">
@@ -63,7 +65,8 @@ background:yellow;
 		<h2>INSERISCI DATI DIPENDENTE</h2>
 		<label>Id Dipendente</label>
 		<input type="text" name="idDipendente" placeholder="Id Dipendente">
-		<input type="submit" name="INVIO">
+		<button type="reset" name="cancella">Cancella</button>
+		<input type="submit" value="INVIO">
 	</div>
 
 </form>

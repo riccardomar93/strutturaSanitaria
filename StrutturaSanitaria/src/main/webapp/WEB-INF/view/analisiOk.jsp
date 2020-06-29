@@ -52,10 +52,39 @@ color:white;
 input [type="submit"]:hover{
 background:yellow;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
 </style>
 </head>
 <body>
-<p><a href="homePage">HomePage</a></p>
+<ul>
+  <li><a href="homePage">Home</a></li> 
+</ul>
 <div class ="wrap">
 
 	<form action="inserimentoAnalisi" method="get">
@@ -64,7 +93,8 @@ background:yellow;
 		<input type="text" name="nome_paziente" placeholder="Nome">
 		<input type="text" name="cognome_paziente" placeholder="Cognome">
 		<input type="text" name="cod_ricetta" placeholder="Codice Ricetta">
-		<input type="submit" name="INVIO">
+		<button type="reset" name="cancella">Cancella</button>
+		<input type="submit" value="INVIO">
 	</div>
 
 
