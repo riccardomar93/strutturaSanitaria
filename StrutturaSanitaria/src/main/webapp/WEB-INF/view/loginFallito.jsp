@@ -10,9 +10,11 @@
 
 body{
 	
-	background-image :url(CSS/error-t.jpg);
-	height:100px;
-	weight:100px;
+	background :url(CSS/sorry.jpg);
+	background-position:center center;
+	-webkit-background-size:cover;
+	background-size:cover;
+	height:100vh;
 	
 	}
 
