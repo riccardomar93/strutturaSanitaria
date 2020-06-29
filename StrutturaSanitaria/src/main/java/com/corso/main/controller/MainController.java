@@ -223,7 +223,7 @@ public class MainController implements ErrorController {
     }
     @GetMapping("/ricercaDipById")
     public String cercaById(Model m,@RequestParam(name ="idDipendente") Integer idDipendente) {
-
+    	if(controlloLogin==true) {
 	Dipendente d = ds.findByIdDipendente(idDipendente);
 	String controllo;
 	if(d!=null) {
@@ -238,6 +238,8 @@ public class MainController implements ErrorController {
 		controllo="dipendenteNo";
 		return controllo;
 	}
+    	}
+    	else return "login";
 	
 
     }
@@ -250,7 +252,8 @@ public class MainController implements ErrorController {
 
 	ds.saveAndFlush(d);
 	
-	return "confermaAggiunta";}
+	return "confermaAggiunta";
+	}
     	else return"login";
     }
 
@@ -395,7 +398,7 @@ public class MainController implements ErrorController {
  
     @Override
     public String getErrorPath() {
-        return "/error";
+        return "error";
     }
 
 }

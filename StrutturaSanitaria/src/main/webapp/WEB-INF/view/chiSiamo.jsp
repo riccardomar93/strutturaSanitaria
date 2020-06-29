@@ -106,7 +106,7 @@ html {
 </ul>
 <div class="about-section">
   <h1>CHI SIAMO</h1>
-  <p>Gruppo solving-team</p>
+  <p>Gruppo Solving-Team</p>
 </div>
 
 <h2 style="text-align:center">IL NOSTRO TEAM</h2>
@@ -130,7 +130,7 @@ html {
       <div class="container">
         <h2>Noemi Caponi</h2>
         <p class="title">BACK-END(INSERIMENTO DATI IN DB)</p>
-        <p> ipsum ipsum lorem.</p>
+        <p> Grazie a Riccardo ho capito...W LAZIO SEMPRE SFL</p>
         <p>noemi.caponi@gmail.com</p>
         
       </div>

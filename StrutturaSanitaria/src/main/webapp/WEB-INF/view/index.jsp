@@ -6,6 +6,12 @@
 <meta charset="ISO-8859-1">
 <link rel = "stylesheet" type = "text/css" href = "CSS/homePage.css" />
 <title>HOME PAGE</title>
+<style>
+body{
+background-image: url(CSS/homePage.jpg);
+}
+
+</style>
 </head>
 <body>
 
